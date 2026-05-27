@@ -18,7 +18,6 @@ import {
   TabValue,
   Textarea,
   Text,
-  Title2,
   Title3,
   tokens,
 } from "@fluentui/react-components";
@@ -535,6 +534,33 @@ export function ResultsPage() {
     return () => window.clearTimeout(t);
   }, [copied]);
 
+  const questions = (data?.questions ?? []) as QuestionOut[];
+  const resolveM = useMutation({
+    mutationFn: () => {
+      if (!runId) throw new Error("Missing run id");
+      return resolveClarifications(
+        runId,
+        {
+          answers: answerByQuestion,
+          suggested_inputs: Object.fromEntries(
+            questions.map((qItem, qi) => [
+              qItem.question_id ?? `q-${qi}`,
+              qItem.assumption_if_unanswered
+                ? `Possible answer baseline: ${qItem.assumption_if_unanswered}`
+                : "Possible answer baseline: confirm scope, owner, constraints, and dates.",
+            ]),
+          ),
+          additional_notes: "",
+        },
+        additionalFiles,
+      );
+    },
+    onSuccess: () => {
+      void q.refetch();
+      setTab("draft");
+    },
+  });
+
   if (!runId) {
     return (
       <MainPanel title="Results" subtitle="Missing run id.">
@@ -544,7 +570,6 @@ export function ResultsPage() {
   }
 
   const reqs = (data?.requirements ?? []) as RequirementOut[];
-  const questions = (data?.questions ?? []) as QuestionOut[];
   const timeline = (data?.timeline ?? []) as TimelineMilestoneOut[];
   const sections = (data?.draft_response?.sections ?? []).filter(
     (section) => !/strict timeline table/i.test(section.title ?? ""),
@@ -577,29 +602,6 @@ export function ResultsPage() {
     { key: "text", label: "Requirement", width: "38%", render: (row) => <Text className={styles.reqTextBody}>{row.text ?? ""}</Text> },
     { key: "ambiguity", label: "Amb.", width: "8%", render: (row) => row.ambiguity_score ?? "—" },
   ];
-  const resolveM = useMutation({
-    mutationFn: () =>
-      resolveClarifications(
-        runId!,
-        {
-          answers: answerByQuestion,
-          suggested_inputs: Object.fromEntries(
-            questions.map((qItem, qi) => [
-              qItem.question_id ?? `q-${qi}`,
-              qItem.assumption_if_unanswered
-                ? `Possible answer baseline: ${qItem.assumption_if_unanswered}`
-                : "Possible answer baseline: confirm scope, owner, constraints, and dates.",
-            ]),
-          ),
-          additional_notes: "",
-        },
-        additionalFiles,
-      ),
-    onSuccess: () => {
-      void q.refetch();
-      setTab("draft");
-    },
-  });
 
   async function copyDraft() {
     const text = sections.map((section) => `${section.title ?? ""}\n\n${section.body ?? ""}`).join("\n\n");

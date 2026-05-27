@@ -3,16 +3,14 @@ from __future__ import annotations
 import pytest
 
 from core.llm import (
-    LLMError,
-    OpenAICompatibleClient,
     _JSON_ONLY_SUFFIX,
+    OpenAICompatibleClient,
     _estimate_tokens,
     _extract_json,
     _finalize_groq_system,
     _fit_groq_payload,
     _groq_messages_for_attempt,
     _groq_output_token_cap,
-    _groq_payload_too_large,
     _parse_groq_retry_seconds,
     _strip_json_suffix,
 )

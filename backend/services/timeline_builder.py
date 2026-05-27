@@ -5,7 +5,7 @@ from datetime import date, datetime, timedelta
 from pathlib import Path
 
 from models.pipeline import OutputBundle, TimelineMilestone
-from models.rfp import RFPDocument, Requirement
+from models.rfp import Requirement, RFPDocument
 
 
 def _project_name(rfp: RFPDocument) -> str:

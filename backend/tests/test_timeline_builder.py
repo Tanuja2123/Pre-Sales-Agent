@@ -3,7 +3,7 @@ from __future__ import annotations
 from datetime import UTC, datetime
 
 from models.pipeline import OutputBundle
-from models.rfp import MAFLevel, RFPDocument, Requirement, RequirementType
+from models.rfp import MAFLevel, Requirement, RequirementType, RFPDocument
 from services.timeline_builder import build_strict_timeline, ensure_bundle_timeline
 
 

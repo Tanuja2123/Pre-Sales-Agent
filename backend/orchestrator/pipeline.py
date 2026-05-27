@@ -17,9 +17,6 @@ from agents.scope_gathering_agent import ScopeGatheringAgent
 from agents.stage_tools import AuditToolPlugin, RetrievalToolPlugin, RevisionToolPlugin
 from agents.summarization_agent import SummarizationAgent
 from agents.understanding_agent import UnderstandingAgent
-from services.chat_store import append_message, load_messages
-from services import run_store
-from services.timeline_builder import build_strict_timeline, ensure_bundle_timeline
 from core.agent_runtime import AgentRuntime, make_tool
 from core.config import Settings, get_settings
 from core.llm import format_pipeline_error
@@ -31,8 +28,11 @@ from models.pipeline import (
     PipelineState,
     PipelineStatus,
 )
-from models.rfp import MAFLevel, RFPDocument, RequirementList
+from models.rfp import MAFLevel, RequirementList, RFPDocument
 from rag.retrieval import AbstractVectorStore, make_vector_store
+from services import run_store
+from services.chat_store import append_message
+from services.timeline_builder import build_strict_timeline, ensure_bundle_timeline
 
 log = get_logger(__name__)
 

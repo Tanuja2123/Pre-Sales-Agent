@@ -62,11 +62,11 @@ def clarification_to_prompt_context(doc: ClarificationResolutionDocument) -> str
         lines.append(f"Additional notes: {doc.additional_notes}")
     for item in doc.items:
         lines.append(
-            (
+            
                 f"- {item.question_id} ({item.source_requirement}): {item.question_text}\n"
                 f"  Suggested input: {item.suggested_input}\n"
                 f"  Final resolution ({item.resolution_source}): {item.final_resolution}"
-            )
+            
         )
     if doc.chat_user_inputs_excerpt:
         lines.append("Recent user chat inputs:")

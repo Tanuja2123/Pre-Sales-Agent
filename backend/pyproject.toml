@@ -10,3 +10,7 @@ src = ["."]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP"]
+ignore = ["E501"]
+
+[tool.ruff.lint.per-file-ignores]
+"scripts/seed_demo_users.py" = ["E402"]

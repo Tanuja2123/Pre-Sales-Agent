@@ -19,7 +19,8 @@ def _now_iso() -> str:
 
 
 def _connect(settings: Settings) -> sqlite3.Connection:
-    from services.run_store import ensure_initialized, _connect as run_connect  # noqa: PLC0415
+    from services.run_store import _connect as run_connect
+    from services.run_store import ensure_initialized  # noqa: PLC0415
 
     ensure_initialized(settings)
     return run_connect(settings)

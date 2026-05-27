@@ -6,8 +6,8 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from core.config import get_settings
 from core.agent_runtime import build_agent_runtime
+from core.config import get_settings
 from core.logging import configure_logging
 from orchestrator.pipeline import hydrate_caches
 from routers import auth_router, health_router, rfp_router
