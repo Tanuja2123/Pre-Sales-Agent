@@ -1,0 +1,10 @@
+# Optional: deploy to Azure Container Apps (placeholder — configure secrets & registry).
+name: Deploy Azure
+on:
+  workflow_dispatch:
+
+jobs:
+  placeholder:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Configure az login, ACR, and containerapp update per your tenant."

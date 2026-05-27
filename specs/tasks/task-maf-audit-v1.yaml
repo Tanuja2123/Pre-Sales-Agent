@@ -1,0 +1,10 @@
+id: task-maf-audit-v1
+type: task
+parent_feature: feat-evaluate-v1
+version: "1.0"
+title: MAF audit of draft vs requirements
+maf_target: ACCEPTABLE
+acceptance_criteria:
+  - MAFAuditResult includes minimum_met and coverage
+agent: EvaluationAgent
+test_cases: backend/tests/unit/test_evaluation_agent.py

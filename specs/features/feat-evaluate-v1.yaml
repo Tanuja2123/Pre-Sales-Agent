@@ -1,0 +1,11 @@
+id: feat-evaluate-v1
+type: feature
+parent: vision-presales-v1
+version: "1.0"
+title: Evaluation — MAF Audit
+acceptance_criteria:
+  - Produces MAFAuditResult with coverage and blockers
+  - minimum_met false blocks completion
+related_tasks:
+  - task-maf-audit-v1
+  - task-gonogo-v1

@@ -1,0 +1,10 @@
+id: task-maf-classify-v1
+type: task
+parent_feature: feat-understand-v1
+version: "1.0"
+title: Classify requirements by MAF
+maf_target: MINIMUM
+acceptance_criteria:
+  - Each requirement has maf_classification M|A|F
+agent: UnderstandingAgent
+test_cases: backend/tests/unit/test_understanding_agent.py

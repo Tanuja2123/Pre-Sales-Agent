@@ -1,0 +1,10 @@
+id: feat-response-v1
+type: feature
+parent: vision-presales-v1
+version: "1.0"
+title: Response Drafting with RAG Context
+acceptance_criteria:
+  - Draft sections reference requirements
+  - Win theme placeholders allowed in text
+related_tasks:
+  - task-draft-section-v1

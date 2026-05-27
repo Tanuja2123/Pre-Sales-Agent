@@ -1,0 +1,10 @@
+id: feat-summarize-v1
+type: feature
+parent: vision-presales-v1
+version: "1.0"
+title: Summarization — Executive Summary & MAF Map
+acceptance_criteria:
+  - Output validates against output-summary-v1
+  - Includes go/no-go recommendation field
+related_tasks:
+  - task-summarize-v1

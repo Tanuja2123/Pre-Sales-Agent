@@ -1,0 +1,10 @@
+id: task-draft-section-v1
+type: task
+parent_feature: feat-response-v1
+version: "1.0"
+title: Draft response using RAG snippets
+maf_target: ACCEPTABLE
+acceptance_criteria:
+  - DraftResponse validates against output-draft-v1
+agent: ResponseDraftAgent
+test_cases: backend/tests/unit/test_response_agent.py

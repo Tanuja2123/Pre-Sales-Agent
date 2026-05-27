@@ -1,0 +1,104 @@
+REQUEST FOR PROPOSAL (RFP)
+═══════════════════════════════════════════════════════════════════
+
+RFP Number:        RFP-2026-MAQ-0142
+Organization:      Contoso Municipal Services (CMS)
+Issue Date:        12 May 2026
+Submission Due:    30 June 2026, 17:00 Eastern Time
+Contact:           procurement@contoso-municipal.example.org
+
+═══════════════════════════════════════════════════════════════════
+SECTION I — INTRODUCTION AND OBJECTIVES
+═══════════════════════════════════════════════════════════════════
+
+CMS seeks a qualified vendor to design, implement, and operate a secure
+cloud-based case management platform for citizen service requests across
+twelve departments. The solution must integrate with our existing Microsoft
+365 tenant and support hybrid operations during an 18-month migration.
+
+The vendor shall demonstrate prior delivery of comparable public-sector
+deployments within North America within the last five (5) years.
+
+═══════════════════════════════════════════════════════════════════
+SECTION II — SCOPE OF WORK
+═══════════════════════════════════════════════════════════════════
+
+2.1 Functional Requirements
+
+FR-001 (Mandatory): The system shall provide role-based access control (RBAC)
+with least-privilege defaults and quarterly access certification workflows.
+
+FR-002 (Mandatory): The platform must support digital intake channels: web
+portal, mobile-responsive UI, and API for partner agencies. All channels
+shall write to a single canonical case record.
+
+FR-003 (Mandatory): The vendor shall deliver configurable workflow engines
+for at least three (3) parallel case types: Permitting, Code Enforcement,
+and Public Works. Workflows must support SLAs, escalations, and audit trails.
+
+FR-004 (Desirable): Integration with GIS for location-linked cases is highly
+valued but not mandatory for initial go-live.
+
+FR-005 (Mandatory): The solution shall export case data in bulk to CSV and
+JSON, and shall support incremental nightly extracts to CMS-owned storage.
+
+2.2 Non-Functional Requirements
+
+NFR-001 (Mandatory): The system shall maintain 99.9% monthly availability for
+production workloads, excluding scheduled maintenance windows not exceeding
+four (4) hours per month with at least fourteen (14) days’ notice.
+
+NFR-002 (Mandatory): All data at rest and in transit shall use industry-standard
+encryption (AES-256 or equivalent; TLS 1.2 minimum, TLS 1.3 preferred).
+
+NFR-003 (Desirable): Response time for common portal actions (search, open case,
+add note) should be under two (2) seconds at the 95th percentile under nominal load.
+
+2.3 Constraints and Compliance
+
+C-001 (Mandatory): The vendor must comply with applicable privacy regulations
+including PIPEDA alignment for citizen data and CMS records retention policy
+(minimum seven (7) years for closed cases).
+
+C-002 (Mandatory): Subcontractors handling personal information must be
+disclosed in the proposal and bound by equivalent contractual protections.
+
+═══════════════════════════════════════════════════════════════════
+SECTION III — EVALUATION AND AWARD
+═══════════════════════════════════════════════════════════════════
+
+Proposals will be scored on the following weighted criteria:
+
+  • Technical approach and architecture .............. 35%
+  • Implementation plan and milestones ............. 25%
+  • Past performance and references ................ 20%
+  • Total cost of ownership (TCO) .................. 20%
+
+CMS reserves the right to award to the proposal offering the best overall
+value. Oral clarifications may be requested; all material commitments must
+appear in the written proposal.
+
+═══════════════════════════════════════════════════════════════════
+SECTION IV — SUBMISSION INSTRUCTIONS
+═══════════════════════════════════════════════════════════════════
+
+Submit one (1) PDF not exceeding fifty (50) pages, plus a separate pricing
+workbook (Excel). Late submissions will not be accepted. Questions must be
+submitted in writing no later than 15 June 2026.
+
+═══════════════════════════════════════════════════════════════════
+SECTION V — AMBIGUOUS / CLARIFICATION ITEMS (INTENTIONAL FOR TESTING)
+═══════════════════════════════════════════════════════════════════
+
+• “Comparable public-sector deployments” — CMS has not defined minimum
+  contract value or user counts; vendors should state any assumptions.
+
+• GIS integration timeline is referenced as “Phase 2” without a calendar
+  definition tied to contract award.
+
+• “Nominal load” for performance testing is not numerically specified in
+  this draft RFP.
+
+═══════════════════════════════════════════════════════════════════
+END OF DOCUMENT
+═══════════════════════════════════════════════════════════════════

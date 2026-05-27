@@ -1,0 +1,84 @@
+/* Enterprise dark shell — slate surfaces with azure brand accent */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #0b1220;
+  background-image:
+    radial-gradient(1200px 600px at 0% -10%, rgba(59, 130, 246, 0.10), transparent 60%),
+    radial-gradient(900px 500px at 100% 0%, rgba(99, 102, 241, 0.08), transparent 55%);
+  background-attachment: fixed;
+  color: #e6ebf5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "ss01", "cv11", "kern";
+}
+
+#root {
+  min-height: 100vh;
+}
+
+:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+code {
+  font-family: "Cascadia Code", "Fira Code", ui-monospace, monospace;
+  font-size: 0.9em;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(59, 130, 246, 0.12);
+  color: #cdd9ff;
+}
+
+/* Refined scrollbars for a more polished enterprise feel. */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(99, 110, 138, 0.28);
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background-clip: padding-box;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(99, 110, 138, 0.5);
+}
+
+* {
+  scrollbar-color: rgba(99, 110, 138, 0.32) transparent;
+  scrollbar-width: thin;
+}
+
+/* Shared enterprise surface styling for cards/tables. */
+.pulse-surface {
+  background-color: #0f172a !important;
+  border-color: #26334d !important;
+}
+
+.pulse-surface .fui-TableRow:hover {
+  background-color: rgba(59, 130, 246, 0.06) !important;
+}
+
+::selection {
+  background: rgba(59, 130, 246, 0.35);
+  color: #ffffff;
+}

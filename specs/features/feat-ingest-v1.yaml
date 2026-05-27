@@ -1,0 +1,12 @@
+id: feat-ingest-v1
+type: feature
+parent: vision-presales-v1
+version: "1.0"
+title: Document Ingestion & Parsing
+acceptance_criteria:
+  - PDF and DOCX parse to text with metadata
+  - Chunking produces stable chunk ids
+  - Failures surface as parse errors with reason
+related_tasks:
+  - task-ingest-v1
+  - task-chunk-v1

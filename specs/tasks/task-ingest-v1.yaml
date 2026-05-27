@@ -1,0 +1,11 @@
+id: task-ingest-v1
+type: task
+parent_feature: feat-ingest-v1
+version: "1.0"
+title: Parse document to RFPDocument
+maf_target: MINIMUM
+acceptance_criteria:
+  - RFPDocument validates against output-rfp-json-v1
+  - Unsupported format returns controlled error
+agent: IngestionAgent
+test_cases: backend/tests/unit/test_ingestion.py

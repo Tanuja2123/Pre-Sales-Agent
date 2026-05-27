@@ -1,0 +1,11 @@
+id: task-summarize-v1
+type: task
+parent_feature: feat-summarize-v1
+version: "1.0"
+title: Executive summary JSON
+maf_target: ACCEPTABLE
+acceptance_criteria:
+  - Validates against output-summary-v1
+prompt_template: prompt-summarize-v1
+agent: SummarizationAgent
+test_cases: backend/tests/unit/test_summarization_agent.py

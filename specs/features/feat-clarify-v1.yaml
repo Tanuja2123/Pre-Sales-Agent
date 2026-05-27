@@ -1,0 +1,11 @@
+id: feat-clarify-v1
+type: feature
+parent: vision-presales-v1
+version: "1.0"
+title: Clarification — Questions from Ambiguities
+acceptance_criteria:
+  - Questions tagged by category and priority
+  - Linked to source requirement when possible
+related_tasks:
+  - task-ambiguity-v1
+  - task-question-gen-v1

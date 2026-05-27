@@ -1,0 +1,7 @@
+id: output-draft-v1
+type: output
+version: "1.0"
+title: Draft response
+pydantic_model: models.rfp.DraftResponse
+fields:
+  sections: list[DraftSection]

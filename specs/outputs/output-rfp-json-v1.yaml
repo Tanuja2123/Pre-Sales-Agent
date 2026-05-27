@@ -1,0 +1,13 @@
+id: output-rfp-json-v1
+type: output
+version: "1.0"
+title: RFPDocument schema
+pydantic_model: models.rfp.RFPDocument
+fields:
+  document_id: string
+  filename: string
+  upload_timestamp: datetime
+  raw_text: string
+  chunks: list[DocumentChunk]
+  sections: dict[string, string]
+  metadata: dict[string, string]

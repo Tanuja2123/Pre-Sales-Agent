@@ -1,0 +1,7 @@
+id: output-questions-v1
+type: output
+version: "1.0"
+title: Clarifying questions
+pydantic_model: models.rfp.QuestionList
+fields:
+  questions: list[ClarifyingQuestion]

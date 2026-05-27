@@ -1,0 +1,11 @@
+id: task-chunk-v1
+type: task
+parent_feature: feat-ingest-v1
+version: "1.0"
+title: Chunk RFP text
+maf_target: MINIMUM
+acceptance_criteria:
+  - Chunks overlap and size within configured bounds
+  - Each chunk has unique chunk_id
+agent: IngestionAgent
+test_cases: backend/tests/unit/test_chunking.py

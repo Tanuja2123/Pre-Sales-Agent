@@ -1,0 +1,11 @@
+id: feat-understand-v1
+type: feature
+parent: vision-presales-v1
+version: "1.0"
+title: RFP Understanding — Requirements
+acceptance_criteria:
+  - Requirements have id, type, priority, MAF class, source section
+  - Ambiguity score 0–10 per requirement
+related_tasks:
+  - task-req-extract-v1
+  - task-maf-classify-v1

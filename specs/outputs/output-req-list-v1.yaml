@@ -1,0 +1,7 @@
+id: output-req-list-v1
+type: output
+version: "1.0"
+title: Requirement list
+pydantic_model: models.rfp.RequirementList
+fields:
+  requirements: list[Requirement]

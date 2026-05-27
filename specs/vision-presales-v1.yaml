@@ -1,0 +1,18 @@
+id: vision-presales-v1
+type: vision
+version: "1.0"
+title: Pre-Sales AI Agent — Mission & Success
+description: >
+  Transform unstructured RFPs into structured pre-sales intelligence: requirements,
+  summary, clarifications, draft response, and MAF audit — in minutes with human gates.
+success_metrics:
+  - name: time_to_first_insight
+    target: "< 15 minutes for typical RFP"
+  - name: mandatory_requirement_coverage
+    target: "100% identified or explicit gap"
+  - name: maf_gate_integrity
+    target: "No pipeline complete when M unmet"
+stakeholders:
+  - BD analysts and leads
+  - Proposal writers
+  - Account leadership

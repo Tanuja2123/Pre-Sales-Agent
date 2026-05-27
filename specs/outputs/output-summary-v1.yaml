@@ -1,0 +1,13 @@
+id: output-summary-v1
+type: output
+version: "1.0"
+title: RFPSummary
+pydantic_model: models.rfp.RFPSummary
+fields:
+  client_overview: string
+  strategic_objectives: string
+  key_requirements: list[string]
+  evaluation_criteria: string
+  risk_flags: list[string]
+  bid_strategy: string
+  go_no_go_recommendation: string

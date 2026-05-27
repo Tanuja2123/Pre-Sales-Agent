@@ -1,0 +1,11 @@
+id: task-gonogo-v1
+type: task
+parent_feature: feat-evaluate-v1
+version: "1.0"
+title: Go / No-Go on Minimum MAF
+maf_target: MINIMUM
+acceptance_criteria:
+  - Emits GoNoGoDecision with rationale
+  - Abort path documented when parse fails
+agent: PipelineOrchestrator
+test_cases: backend/tests/unit/test_maf_gate.py

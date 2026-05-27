@@ -1,0 +1,10 @@
+id: task-question-gen-v1
+type: task
+parent_feature: feat-clarify-v1
+version: "1.0"
+title: Generate clarifying questions
+maf_target: ACCEPTABLE
+acceptance_criteria:
+  - Validates against output-questions-v1
+agent: ClarificationAgent
+test_cases: backend/tests/unit/test_clarification_agent.py
